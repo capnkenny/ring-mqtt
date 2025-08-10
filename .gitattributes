@@ -2,3 +2,6 @@
 * text=auto
 *.sh text eol=lf
 *.js text eol=lf
+
+init\s6\services.d\ring-mqtt\finish text eol=lf
+init\s6\services.d\ring-mqtt\run text eol=lf

@@ -12,7 +12,7 @@
 if [ -v HASSIO_TOKEN ]; then
     RUNMODE_BANNER="Addon for Home Assistant"
     # Use bashio to get configured branch
-    export BRANCH=$(bashio::config "branch")
+    export BRANCH="dev"
 else
     RUNMODE_BANNER="Docker Edition          "
 fi

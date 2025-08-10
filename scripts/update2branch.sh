@@ -3,11 +3,8 @@ HOME=/app
 cd /app
 if [ ! -d "/app/ring-mqtt-${BRANCH}" ]; then
     echo "Updating ring-mqtt to the ${BRANCH} version..."
-    if [ "${BRANCH}" = "latest" ]; then
-        git clone https://github.com/tsightler/ring-mqtt ring-mqtt-latest
-    else
-        git clone -b dev https://github.com/tsightler/ring-mqtt ring-mqtt-dev
-    fi
+    
+    git clone -b dev https://github.com/tsightler/ring-mqtt ring-mqtt-dev
     cd "/app/ring-mqtt-${BRANCH}"
     echo "Installing node module dependencies, please wait..."
     npm install --no-progress > /dev/null 2>&1
